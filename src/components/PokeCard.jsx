@@ -30,8 +30,6 @@ const PokeCard = ({ url, name }) => {
     fetchPokeDetailData();
   }, []);
 
-  console.log(pokemon);
-
   const bg = `bg-${pokemon?.type}`;
   const border = `border-${pokemon?.type}`;
   const text = `text-${pokemon?.type}`;
