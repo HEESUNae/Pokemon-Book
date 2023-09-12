@@ -5,8 +5,7 @@ const BaseStat = ({ valueStat, nameStat, type }) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    const calc = valueStat * (100 / 255);
-    ref.current.style.width = calc + '%';
+    ref.current.style.width = valueStat + '%';
   }, []);
 
   return (
@@ -18,7 +17,7 @@ const BaseStat = ({ valueStat, nameStat, type }) => {
           <div ref={ref} className={`h-3 ${bg}`}></div>
         </div>
       </td>
-      <td className="px-2 sm:px-5">255</td>
+      <td className="px-2 sm:px-5">100</td>
     </tr>
   );
 };
